@@ -1,0 +1,37 @@
+{
+  "Actions": [
+    {
+      "Icon": "img/actionIcon",
+      "Name": "Execute",
+      "States": [
+        {
+          "Image": "img/actionDefaultImage"
+        }
+      ],
+      "SupportedInMultiActions": true,
+      "Tooltip": "Execute Bakkes mod (Rocket League) commands",
+      "UUID": "de.flexniko.bakkesmodcommands.action"
+    }
+  ],
+  "SDKVersion": 2,
+  "Name": "BakkesModCommands",
+  "Author": "FlexNiko",
+  "Description": "Execute Bakkes mod (Rocket League) commands. Don't forget to add each base command (without arguments) that you want to allow, in the file: '%appdata%\\bakkesmod\\bakkesmod\\data\\rcon_commands.cfg'. Password can be found using 'rcon_password' inside your Bakkes Mod Console",
+  "Icon": "img/pluginIcon",
+  "Category": "BakkesModCommands",
+  "CategoryIcon": "img/pluginIcon",
+  "CodePath": "src/index.html",
+  "PropertyInspectorPath": "src/pi.html",
+  "URL": "https://github.com/FlexXx1212/StreamDeckBakkesPlugin",
+  "Version": "1.0",
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Software": 
+    {
+        "MinimumVersion" : "4.1"
+    }
+}
