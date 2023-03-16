@@ -2,7 +2,7 @@
   "Actions": [
     {
       "Icon": "img/actionIcon",
-      "Name": "Execute",
+      "Name": "Command",
       "States": [
         {
           "Image": "img/actionDefaultImage"
@@ -23,7 +23,7 @@
   "CodePath": "src/index.html",
   "PropertyInspectorPath": "src/pi.html",
   "URL": "https://github.com/FlexXx1212/StreamDeckBakkesPlugin",
-  "Version": "1.0",
+  "Version": "1.3",
   "OS": [
     {
       "Platform": "windows",
