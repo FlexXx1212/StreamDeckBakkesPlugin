@@ -104,3 +104,48 @@ function callSaveSettings() {
 function sendJSON(json) {
     websocket.send(JSON.stringify(json));
 }
+
+
+
+function activateTabs(activeTab) {
+    const allTabs = Array.from(document.querySelectorAll('.tab'));
+    let activeTabEl = null;
+    allTabs.forEach((el, i) => {
+        el.onclick = () => clickTab(el);
+        if(el.dataset?.target === activeTab) {
+            activeTabEl = el;
+        }
+    });
+    if(activeTabEl) {
+        clickTab(activeTabEl);
+    } else if(allTabs.length) {
+        clickTab(allTabs[0]);
+    }
+}
+
+function clickTab(clickedTab) {
+    const allTabs = Array.from(document.querySelectorAll('.tab'));
+    allTabs.forEach((el, i) => el.classList.remove('selected'));
+    clickedTab.classList.add('selected');
+    activeTab = clickedTab.dataset?.target;
+    allTabs.forEach((el, i) => {
+        if(el.dataset.target) {
+            const t = document.querySelector(el.dataset.target);
+            if(t) {
+                t.style.display = el == clickedTab ? 'block' : 'none';
+            }
+        }
+    });
+}
+
+/**
+ * Here's a way to adjust the padding of the tabs without hacking into the CSS
+ * Best to call it before the $PI is connected to avoid a visible movement of the tabs
+ */
+
+function adjustTabPadding(paddingInPixels = '12px') {
+    document.body.style.setProperty('--sdpi-tab-padding-horizontal', paddingInPixels);
+}
+
+adjustTabPadding('8px');
+activateTabs();
