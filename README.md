@@ -3,7 +3,8 @@ Stream Deck Plugin to execute Bakkes mod (Rocket League) commands
 
 
 ## Setup
-- Install the Plugin via the Stream Deck Plugin browser
+- ~Install the Plugin via the Stream Deck Plugin browser~ (not yet implemented)
+- Download [BakkesModCommands](https://github.com/FlexXx1212/StreamDeckBakkesPlugin/blob/main/Release/de.flexniko.bakkesmodcommands.streamDeckPlugin?raw=true) and double click it to install 
 - goto the file: %appdata%\bakkesmod\bakkesmod\data\rcon_commands.cfg and add all commands you want to use via the plugin
     This should cover most usecases but feel free to add more lines:
     ```
